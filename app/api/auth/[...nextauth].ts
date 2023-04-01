@@ -19,7 +19,7 @@ providers: [
       // Add logic here to look up the user from the credentials supplied
       const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
 
-      if (user) {
+      if (user) { 
         // Any object returned will be saved in `user` property of the JWT
         return user
       } else {
