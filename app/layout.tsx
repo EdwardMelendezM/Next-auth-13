@@ -32,7 +32,7 @@ export default function RootLayout ({
       {/* <Provider> */}
 
       <body>
-        <ThemePage newData={children} />
+        <ThemePage newData={children} pageProps={{ session: 's' }} />
       </body>
       {/* </Provider> */}
 
