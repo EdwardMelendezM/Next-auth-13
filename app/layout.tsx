@@ -1,9 +1,7 @@
-'use client'
 import React from 'react'
 // import Provider from './Provider'
 import './../styles/globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import ThemePage from '@/components/ThemePage'
 
 export default function RootLayout ({
   children
@@ -14,9 +12,10 @@ export default function RootLayout ({
     title: 'The Bloggin Platform for Developers',
     description: 'Start your developer blog, share ideas, and connect with the dev community',
     type: 'website'
-
   }
+
   return (
+
     <html lang='es'>
       <head>
         <title>{meta.title}</title>
@@ -28,21 +27,16 @@ export default function RootLayout ({
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
 
-        <link rel='icon' href='./favicon' />
+        {/* <link rel='icon' href='./favicon' /> */}
       </head>
       {/* <Provider> */}
 
       <body>
-        <div className='min-h-screen flex flex-col'>
-          <Header />
-          <main className='flex-grow container mx-auto px-4 sm:px-6'>
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <ThemePage newData={children} />
       </body>
       {/* </Provider> */}
 
     </html>
+
   )
 }
